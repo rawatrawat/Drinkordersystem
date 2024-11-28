@@ -1,0 +1,17 @@
+{
+  "name": "drink_order_system",
+  "version": "1.0.0",
+  "description": "A server-side application for managing drink orders.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-session": "*",
+    "mongoose": "*"
+  }
+}
