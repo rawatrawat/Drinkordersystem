@@ -1,0 +1,43 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUCCESS</title>
+</head>
+<body>
+    <h1>SUCCESS</h1>
+    
+    <div id="actionDisplay">
+        <% if (action) { %>
+            <p>Action: <%= action %> performed</p>
+        <% } %>
+    </div>
+
+    <div id="orderResults">
+        <% if (results && results.length > 0) { %>
+            <h2>Order Details:</h2>
+            <ul>
+                <% results.forEach(result => { %>
+                    <li>Name: <%= result.name %></li>
+                    <li>Ice: <%= result.ice %></li>
+                    <li>Order Amount: <%= result.orderAmount %></li>
+                    <li>Size: <%= result.size %></li>
+                    <li>Sugar: <%= result.sugar %></li>
+                    <br>
+                <% }); %>
+            </ul>
+            <% } else { %>
+                <p>No results found.</p>
+            <% } %>
+    </div>
+
+    <button onclick="navigateHome()">Back to Home</button>
+
+    <script>
+        function navigateHome() {
+            window.location.href = '/order';
+        }
+    </script>
+</body>
+</html>
